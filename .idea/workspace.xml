@@ -5,22 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dba1a54-3042-42da-b463-672aefd210ef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/entidades/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/entidades/DetallePedido.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/entidades/Empleado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/entidades/GamaProducto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/entidades/Oficina.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/entidades/Pago.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/entidades/Pedido.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/entidades/Producto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/ClienteDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/DetallePedidoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/EmpleadoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/GamaProductoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/OficinaDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/PagoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/PedidoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/ProductoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/ClienteServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/DetallePedidoServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/EmpleadoServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/GamaProductoServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/OficinaServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/PagoServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/PedidoServicio.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/ProductoServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +39,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MACPV"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MACPV/VIVERO-JPA.git",
+    "accountId": "77fb535e-d9bf-48c2-84a2-b274d72f4bef"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -52,7 +66,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/magnu/IdeaProjects/VIVERO-JPA"
+    "last_opened_file_path": "C:/Users/magnu/IdeaProjects/VIVERO-JPA",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
   <component name="RunManager">
