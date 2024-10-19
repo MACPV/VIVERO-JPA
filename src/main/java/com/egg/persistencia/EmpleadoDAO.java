@@ -14,4 +14,12 @@ public class EmpleadoDAO {
         entityManager.persist(empleado);
         entityManager.getTransaction().commit();
     }
+    public Empleado buscarEmpleadoPorId(int idEmpleado) {
+        try {
+            return entityManager.find(Empleado.class, idEmpleado);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

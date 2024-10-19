@@ -14,4 +14,13 @@ public class OficinaDAO {
         entityManager.persist(oficina);
         entityManager.getTransaction().commit();
     }
+
+    public Oficina buscarOficinaID(Integer idOficina) {
+        try {
+            return entityManager.find(Oficina.class, idOficina);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

@@ -14,4 +14,12 @@ public class ClienteDAO {
         entityManager.persist(cliente);
         entityManager.getTransaction().commit();
     }
+    public Cliente buscarClienteID(Integer idCliente){
+        try {
+            return  entityManager.find(Cliente.class,idCliente);
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

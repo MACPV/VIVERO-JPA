@@ -14,4 +14,13 @@ public class PedidoDAO {
         entityManager.persist(pedido);
         entityManager.getTransaction().commit();
     }
+
+    public Pedido buscarPedidoID(Integer idPedido) {
+        try {
+            return entityManager.find(Pedido.class, idPedido);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

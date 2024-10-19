@@ -5,24 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dba1a54-3042-42da-b463-672aefd210ef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/ClienteDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/DetallePedidoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/EmpleadoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/GamaProductoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/OficinaDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/PagoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/PedidoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/ProductoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/ClienteServicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/DetallePedidoServicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/EmpleadoServicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/GamaProductoServicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/OficinaServicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/PagoServicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/PedidoServicio.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/ProductoServicio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/entidades/Pago.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/entidades/Pago.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/ClienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/ClienteDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/DetallePedidoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/DetallePedidoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/EmpleadoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/EmpleadoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/GamaProductoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/GamaProductoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/OficinaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/OficinaDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/PagoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/PagoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/PedidoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/PedidoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/ProductoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/persistencia/ProductoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/servicios/ClienteServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/ClienteServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/servicios/DetallePedidoServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/DetallePedidoServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/servicios/EmpleadoServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/EmpleadoServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/servicios/GamaProductoServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/GamaProductoServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/servicios/PagoServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/PagoServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/servicios/PedidoServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/PedidoServicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/egg/servicios/ProductoServicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/egg/servicios/ProductoServicio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,18 +39,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "MACPV"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MACPV&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/MACPV/VIVERO-JPA.git",
-    "accountId": "77fb535e-d9bf-48c2-84a2-b274d72f4bef"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MACPV/VIVERO-JPA.git&quot;,
+    &quot;accountId&quot;: &quot;77fb535e-d9bf-48c2-84a2-b274d72f4bef&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -60,16 +60,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/magnu/IdeaProjects/VIVERO-JPA",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/magnu/IdeaProjects/VIVERO-JPA&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.egg.Main" />

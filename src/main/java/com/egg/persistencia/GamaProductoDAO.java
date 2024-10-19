@@ -9,9 +9,19 @@ public class GamaProductoDAO {
     private final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("ViveroPU");
     private final EntityManager entityManager = entityManagerFactory.createEntityManager();
 
-    public void guardarGamaProducto(GamaProducto gamaProducto){
+    public void guardarGamaProducto(GamaProducto gamaProducto) {
         entityManager.getTransaction().begin();
         entityManager.persist(gamaProducto);
         entityManager.getTransaction().commit();
     }
+
+    public GamaProducto buscarGamaProductoID(Integer idGamaProducto) {
+        try {
+            return entityManager.find(GamaProducto.class, idGamaProducto);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }
+

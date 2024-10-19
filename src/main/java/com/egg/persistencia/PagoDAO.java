@@ -15,4 +15,13 @@ public class PagoDAO {
         entityManager.getTransaction().commit();
     }
 
+    public Pago buscarPagoID(Integer idPago) {
+        try {
+            return entityManager.find(Pago.class, idPago);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 }

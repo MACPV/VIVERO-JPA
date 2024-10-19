@@ -74,6 +74,7 @@ public class Pago {
     }
 
     public Cliente getCliente() {
+
         return cliente;
     }
 
