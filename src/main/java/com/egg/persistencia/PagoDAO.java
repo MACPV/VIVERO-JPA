@@ -1,5 +1,6 @@
 package com.egg.persistencia;
 
+import com.egg.entidades.Cliente;
 import com.egg.entidades.Pago;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -24,10 +25,29 @@ public class PagoDAO {
         }
     }
 
-    public void mostrarPago(Pago pago){
+    public void mostrarPago(Pago pago) {
         Pago pago1 = entityManager.find(Pago.class, pago.getIdPago());
         System.out.println(pago1.toString());
 
     }
 
+    public void actualizarPago(Pago pago) throws Exception {
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.merge(pago);
+            entityManager.getTransaction().commit();
+        } catch (Exception e) {
+            entityManager.getTransaction().rollback();
+            throw new Exception("Error al acualizar pago");
+        }
+    }
+
+    public void eliminarPago(Pago pago) throws Exception {
+
+
+        entityManager.getTransaction().begin();
+        entityManager.remove(pago);
+        entityManager.getTransaction().commit();
+
+    }
 }

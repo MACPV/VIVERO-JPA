@@ -63,10 +63,10 @@ public class Cliente {
     private BigDecimal limiteCredito;
 
 
-    @OneToMany(mappedBy = "cliente")
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.REMOVE)
     private List<Pedido> pedidos;
 
-    @OneToMany(mappedBy = "cliente")
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.REMOVE)
     private List<Pago> pagos;
 
     public Cliente() {

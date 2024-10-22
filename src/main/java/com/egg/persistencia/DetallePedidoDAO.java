@@ -1,5 +1,6 @@
 package com.egg.persistencia;
 
+import com.egg.entidades.Cliente;
 import com.egg.entidades.DetallePedido;
 import com.egg.entidades.Pedido;
 import com.egg.entidades.Producto;
@@ -28,6 +29,26 @@ public class DetallePedidoDAO {
     public void mostrarDetallePedido(DetallePedido detallePedido){
         DetallePedido detallePedido1 = entityManager.find(DetallePedido.class,detallePedido.getIdDetallePedido());
         System.out.println(detallePedido1.toString());
+    }
+
+    public void actualizarDetallePedido(DetallePedido detallePedido)throws Exception{
+        try{
+            entityManager.getTransaction().begin();
+            entityManager.merge(detallePedido);
+            entityManager.getTransaction().commit();
+        }catch (Exception e){
+            entityManager.getTransaction().rollback();
+            throw new Exception("Error al acualizar Detalle Pedido");
+        }
+    }
+
+    public void eliminarDetallePedido(DetallePedido detallePedido) throws Exception{
+
+
+        entityManager.getTransaction().begin();
+        entityManager.remove(detallePedido);
+        entityManager.getTransaction().commit();
+
     }
 
 

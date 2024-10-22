@@ -24,9 +24,29 @@ public class ClienteDAO {
         }
     }
 
-    public void mostrarCliente( Cliente cliente) {
+    public void mostrarCliente(Cliente cliente) {
         Cliente cliente1 = entityManager.find(Cliente.class, cliente.getIdCliente());
         System.out.print(cliente1.toString());
+
+    }
+
+    public void actualizarCliente(Cliente cliente) throws Exception {
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.merge(cliente);
+            entityManager.getTransaction().commit();
+        } catch (Exception e) {
+            entityManager.getTransaction().rollback();
+            throw new Exception("Error al acualizar Cliente");
+        }
+    }
+
+    public void eliminarCliente(Cliente cliente) throws Exception {
+
+
+        entityManager.getTransaction().begin();
+        entityManager.remove(cliente);
+        entityManager.getTransaction().commit();
 
     }
 }

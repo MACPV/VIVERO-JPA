@@ -31,7 +31,7 @@ public class Oficina {
     @Column(name = "telefono", length = 20)
     private String telefono;
 
-    @OneToMany(mappedBy = "oficina")
+    @OneToMany(mappedBy = "oficina", cascade = CascadeType.REMOVE)
     private List<Empleado> empleados;
 
     public Oficina() {
@@ -124,7 +124,6 @@ public class Oficina {
         sb.append(String.format("║ Telefono           ║ %-38s ║\n", telefono));
 
         sb.append("╚════════════════════╩════════════════════════════════════════╝");
-
 
 
         return sb.toString();

@@ -40,7 +40,7 @@ public class Producto {
     @JoinColumn(name = "id_gama")
     private GamaProducto gamaProducto;
 
-    @OneToMany(mappedBy = "producto")
+    @OneToMany(mappedBy = "producto", cascade = CascadeType.REMOVE)
     private List<DetallePedido> detallePedidos;
 
     public Producto() {

@@ -13,19 +13,19 @@ public class GamaProducto {
     @Column(name = "id_gama")
     private Integer idGama;
 
-    @Column(name = "descripcion_html",length = 255)
+    @Column(name = "descripcion_html", length = 255)
     private String descripcionHtml;
 
     @Column(name = "descripcion_texto", length = 255)
     private String descripcionTexto;
 
-    @Column(name = "gama",length = 255)
+    @Column(name = "gama", length = 255)
     private String gama;
 
-    @Column(name = "imagen",length = 255)
+    @Column(name = "imagen", length = 255)
     private String imagen;
 
-    @OneToMany(mappedBy = "gamaProducto")
+    @OneToMany(mappedBy = "gamaProducto", cascade = CascadeType.REMOVE)
     private List<Producto> productos;
 
     public GamaProducto() {
@@ -75,7 +75,9 @@ public class GamaProducto {
         return productos;
     }
 
-    public void setProductos(List<Producto> productos) {this.productos = productos;}
+    public void setProductos(List<Producto> productos) {
+        this.productos = productos;
+    }
 
     @Override
     public String toString() {

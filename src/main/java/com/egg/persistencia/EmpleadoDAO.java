@@ -1,5 +1,6 @@
 package com.egg.persistencia;
 
+import com.egg.entidades.Cliente;
 import com.egg.entidades.Empleado;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -14,6 +15,7 @@ public class EmpleadoDAO {
         entityManager.persist(empleado);
         entityManager.getTransaction().commit();
     }
+
     public Empleado buscarEmpleadoPorId(int idEmpleado) {
         try {
             return entityManager.find(Empleado.class, idEmpleado);
@@ -23,7 +25,29 @@ public class EmpleadoDAO {
         }
 
     }
-    public void mostrarEmpleado(Empleado empleado){
-    Empleado empleado1 = entityManager.find(Empleado.class, empleado.getIdEmpleado());
+
+    public void mostrarEmpleado(Empleado empleado) {
+        Empleado empleado1 = entityManager.find(Empleado.class, empleado.getIdEmpleado());
         System.out.println(empleado1.toString());
-}}
+    }
+
+    public void actualizarEmpleado(Empleado empleado) throws Exception {
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.merge(empleado);
+            entityManager.getTransaction().commit();
+        } catch (Exception e) {
+            entityManager.getTransaction().rollback();
+            throw new Exception("Error al acualizar Empleado");
+        }
+    }
+
+    public void eliminarEmpleado(Empleado empleado) throws Exception {
+
+
+        entityManager.getTransaction().begin();
+        entityManager.remove(empleado);
+        entityManager.getTransaction().commit();
+
+    }
+}

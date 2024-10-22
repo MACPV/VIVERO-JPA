@@ -1,5 +1,6 @@
 package com.egg.persistencia;
 
+import com.egg.entidades.Cliente;
 import com.egg.entidades.GamaProducto;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -23,9 +24,30 @@ public class GamaProductoDAO {
             return null;
         }
     }
-    public void mostrarGamaProducto(GamaProducto gamaProducto){
-        GamaProducto gamaProducto1 = entityManager.find(GamaProducto.class,gamaProducto.getIdGama());
+
+    public void mostrarGamaProducto(GamaProducto gamaProducto) {
+        GamaProducto gamaProducto1 = entityManager.find(GamaProducto.class, gamaProducto.getIdGama());
         System.out.println(gamaProducto1.toString());
+    }
+
+    public void actualizarGamaProducto(GamaProducto gamaProducto) throws Exception {
+        try {
+            entityManager.getTransaction().begin();
+            entityManager.merge(gamaProducto);
+            entityManager.getTransaction().commit();
+        } catch (Exception e) {
+            entityManager.getTransaction().rollback();
+            throw new Exception("Error al acualizar Gama Producto");
+        }
+    }
+
+    public void eliminarGamaProducto(GamaProducto gamaProducto) throws Exception {
+
+
+        entityManager.getTransaction().begin();
+        entityManager.remove(gamaProducto);
+        entityManager.getTransaction().commit();
+
     }
 }
 

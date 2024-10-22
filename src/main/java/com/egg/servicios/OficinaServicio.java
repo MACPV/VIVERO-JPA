@@ -11,8 +11,14 @@ public class OficinaServicio {
         this.oficinaDAO = new OficinaDAO();
     }
 
-    public void crearOficina(String ciudad, String codigoPostal,
-                             String codigoOficina, String pais, String region, String telefono) {
+    public void crearOficina(
+            String ciudad,
+            String codigoPostal,
+            String codigoOficina,
+            String pais,
+            String region,
+            String telefono
+    ) {
 
         try {
             Oficina oficinaNueva = new Oficina();
@@ -30,8 +36,41 @@ public class OficinaServicio {
         }
     }
 
-    public void buscarOficina(Integer idOficina){
+    public void buscarOficina(Integer idOficina) {
         Oficina oficina = oficinaDAO.buscarOficinaID(idOficina);
         oficinaDAO.mostrarOficina(oficina);
+    }
+
+    public void actualizarOficina(
+            Integer idOficina,
+            String ciudad,
+            String codigoPostal,
+            String codigoOficina,
+            String pais,
+            String region,
+            String telefono
+    ) throws Exception {
+
+        Oficina oficinaExistente = oficinaDAO.buscarOficinaID(idOficina);
+        if (oficinaExistente == null) {
+            throw new Exception("No se encontró la oficina con ID: " + idOficina);
+        }
+
+        oficinaExistente.setCiudad(ciudad);
+        oficinaExistente.setPais(pais);
+        oficinaExistente.setCodigoOficina(codigoOficina);
+        oficinaExistente.setRegion(region);
+        oficinaExistente.setTelefono(telefono);
+        oficinaExistente.setCodigoPostal(codigoPostal);
+
+        oficinaDAO.guardarOficina(oficinaExistente);
+    }
+
+    public void eliminarOficina(Integer idOficina) throws Exception {
+        Oficina oficina = oficinaDAO.buscarOficinaID(idOficina);
+        if (oficina == null) {
+            throw new Exception("No se encontró la oficina con ID: " + idOficina);
+        }
+        oficinaDAO.eliminarOficina(oficina);
     }
 }

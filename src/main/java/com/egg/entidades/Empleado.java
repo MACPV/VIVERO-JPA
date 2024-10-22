@@ -34,7 +34,7 @@ public class Empleado {
     @Column(name = "puesto")
     private String puesto;
 
-@OneToMany(mappedBy = "empleado")
+    @OneToMany(mappedBy = "empleado", cascade = CascadeType.REMOVE)
     private List<Cliente> clientes;
 
     @ManyToOne
