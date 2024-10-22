@@ -10,8 +10,12 @@ public class GamaProductoServicio {
         this.gamaProductoDAO = new GamaProductoDAO();
     }
 
-    public void crearGamaProducto(String descripcionHtml,
-                                    String descripcionTexto, String gama, String imagen) {
+    public void crearGamaProducto(
+            String descripcionHtml,
+            String descripcionTexto,
+            String gama,
+            String imagen
+    ) {
 
         try {
 
@@ -26,5 +30,10 @@ public class GamaProductoServicio {
         } catch (Exception e) {
             System.out.println(e.toString() + "No se guardo la nueva gama de producto");
         }
+    }
+
+    public void buscarGamaProducto(Integer idGama){
+        GamaProducto gamaProducto = gamaProductoDAO.buscarGamaProductoID(idGama);
+        gamaProductoDAO.mostrarGamaProducto(gamaProducto);
     }
 }

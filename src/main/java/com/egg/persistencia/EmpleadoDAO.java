@@ -21,5 +21,9 @@ public class EmpleadoDAO {
             e.printStackTrace();
             return null;
         }
+
     }
-}
+    public void mostrarEmpleado(Empleado empleado){
+    Empleado empleado1 = entityManager.find(Empleado.class, empleado.getIdEmpleado());
+        System.out.println(empleado1.toString());
+}}

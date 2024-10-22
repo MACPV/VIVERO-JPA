@@ -29,4 +29,9 @@ public class OficinaServicio {
             System.out.println(e.toString() + "No se guardó la oficina nueva");
         }
     }
+
+    public void buscarOficina(Integer idOficina){
+        Oficina oficina = oficinaDAO.buscarOficinaID(idOficina);
+        oficinaDAO.mostrarOficina(oficina);
+    }
 }

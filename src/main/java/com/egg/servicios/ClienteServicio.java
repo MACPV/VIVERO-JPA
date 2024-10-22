@@ -61,4 +61,10 @@ public class ClienteServicio {
 
     }
 
+    public void buscarCliente(Integer idCliente) {
+
+        Cliente cliente = clienteDAO.buscarClienteID(idCliente);
+        clienteDAO.mostrarCliente(cliente);
+    }
+
 }

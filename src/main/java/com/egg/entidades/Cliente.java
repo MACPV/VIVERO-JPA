@@ -209,4 +209,27 @@ public class Cliente {
     public void setLimiteCredito(BigDecimal limiteCredito) {
         this.limiteCredito = limiteCredito;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("╔═══════════════════╦═══════════════════════════════════╗\n");
+        sb.append(String.format("║ ID Cliente        ║ %-33d ║\n", idCliente));
+        sb.append("╠═══════════════════╬═══════════════════════════════════╣\n");
+        sb.append(String.format("║ Nombre            ║ %-33s ║\n", nombreCliente));
+        sb.append("╠═══════════════════╬═══════════════════════════════════╣\n");
+        sb.append(String.format("║ Nombre Contacto   ║ %-33s ║\n", nombreContacto));
+        sb.append("╠═══════════════════╬═══════════════════════════════════╣\n");
+        sb.append(String.format("║ Apellido Contacto ║ %-33s ║\n", apellidoContacto));
+        sb.append("╠═══════════════════╬═══════════════════════════════════╣\n");
+        sb.append(String.format("║ Ciudad            ║ %-33s ║\n", ciudad));
+        sb.append("╠═══════════════════╬═══════════════════════════════════╣\n");
+        sb.append(String.format("║ País              ║ %-33s ║\n", pais));
+        sb.append("╠═══════════════════╬═══════════════════════════════════╣\n");
+        sb.append(String.format("║ Límite Crédito    ║ %-33.2f ║\n", limiteCredito));
+        sb.append("╚═══════════════════╩═══════════════════════════════════╝");
+
+        return sb.toString();
+    }
 }

@@ -23,5 +23,9 @@ public class GamaProductoDAO {
             return null;
         }
     }
+    public void mostrarGamaProducto(GamaProducto gamaProducto){
+        GamaProducto gamaProducto1 = entityManager.find(GamaProducto.class,gamaProducto.getIdGama());
+        System.out.println(gamaProducto1.toString());
+    }
 }
 

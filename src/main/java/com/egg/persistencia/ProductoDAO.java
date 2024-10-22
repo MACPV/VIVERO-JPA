@@ -25,6 +25,11 @@ public class ProductoDAO {
         }
     }
 
+    public void mostrarProducto(Producto producto){
+        Producto producto1 = em.find(Producto.class, producto.getIdProducto());
+        System.out.println(producto1.toString());
+    }
+
 
 }
 

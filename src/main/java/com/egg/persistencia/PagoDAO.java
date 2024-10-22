@@ -24,4 +24,10 @@ public class PagoDAO {
         }
     }
 
+    public void mostrarPago(Pago pago){
+        Pago pago1 = entityManager.find(Pago.class, pago.getIdPago());
+        System.out.println(pago1.toString());
+
+    }
+
 }

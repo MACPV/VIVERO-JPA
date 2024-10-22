@@ -133,4 +133,35 @@ public class Producto {
     public void setPrecioVenta(Integer precioVenta) {
         this.precioVenta = precioVenta;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("╔════════════════════╦════════════════════════════════════════╗\n");
+
+        sb.append(String.format("║ ID Producto        ║ %-38d ║\n", idProducto));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Cantidad en Stock  ║ %-38d ║\n", cantidadEnStock));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Codigo Producto    ║ %-38s ║\n", codigoProducto));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Descripcion        ║ %-38s ║\n", descripcion));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Dimensiones        ║ %-38s ║\n", dimensiones));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Nombre             ║ %-38s ║\n", nombre));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Precio Proveedor   ║ %-38s ║\n", precioProveedor));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Proveedor          ║ %-38s ║\n", Proveedor));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+
+        sb.append(String.format("║ Gama Producto ID   ║ %-38d ║\n", gamaProducto.getIdGama()));
+        sb.append(String.format("║ Gama Producto      ║ %-38s ║\n", gamaProducto.getDescripcionTexto()));
+        sb.append("╚════════════════════╩════════════════════════════════════════╝");
+
+
+        return sb.toString();
+    }
 }

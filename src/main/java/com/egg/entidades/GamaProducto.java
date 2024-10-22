@@ -75,7 +75,29 @@ public class GamaProducto {
         return productos;
     }
 
-    public void setProductos(List<Producto> productos) {
-        this.productos = productos;
+    public void setProductos(List<Producto> productos) {this.productos = productos;}
+
+    @Override
+    public String toString() {
+
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("╔════════════════════╦════════════════════════════════════════╗\n");
+
+
+        sb.append(String.format("║ ID Gama Producto   ║ %-38d ║\n", idGama));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Descripcion HTML   ║ %-38s ║\n", descripcionHtml));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Descripcion Texto  ║ %-38s ║\n", descripcionTexto));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Gama               ║ %-38s ║\n", gama));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ imagen             ║ %-38s ║\n", imagen));
+
+        sb.append("╚════════════════════╩════════════════════════════════════════╝");
+
+
+        return sb.toString();
     }
 }

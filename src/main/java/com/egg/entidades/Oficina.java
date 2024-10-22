@@ -100,4 +100,33 @@ public class Oficina {
     public void setEmpleados(List<Empleado> empleados) {
         this.empleados = empleados;
     }
+
+    @Override
+    public String toString() {
+
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("╔════════════════════╦════════════════════════════════════════╗\n");
+
+
+        sb.append(String.format("║ ID Oficna          ║ %-38d ║\n", idOficina));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Ciudad             ║ %-38s ║\n", ciudad));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Codigo Postal      ║ %-38s ║\n", codigoPostal));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Codigo Oficina     ║ %-38s ║\n", codigoOficina));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Pais               ║ %-38s ║\n", pais));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Region             ║ %-38s ║\n", region));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Telefono           ║ %-38s ║\n", telefono));
+
+        sb.append("╚════════════════════╩════════════════════════════════════════╝");
+
+
+
+        return sb.toString();
+    }
 }

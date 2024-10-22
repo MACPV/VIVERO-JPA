@@ -44,4 +44,9 @@ public class PedidoServicio {
 
         pedidoDAO.guardarPedido(pedidoNuevo);
     }
+
+    public void buscarPedido(Integer idPedido){
+        Pedido pedido = pedidoDAO.buscarPedidoID(idPedido);
+        pedidoDAO.mostrarPedido(pedido);
+    }
 }

@@ -23,4 +23,8 @@ public class PedidoDAO {
             return null;
         }
     }
+    public void mostrarPedido(Pedido pedido){
+        Pedido pedido1 = entityManager.find(Pedido.class, pedido.getIdPedido());
+        System.out.println(pedido1.toString());
+    }
 }

@@ -116,4 +116,35 @@ public class Empleado {
     public void setOficina(Oficina oficina) {
         this.oficina = oficina;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("╔════════════════════╦════════════════════════════════════════╗\n");
+
+        sb.append(String.format("║ ID Empleado        ║ %-38d ║\n", idEmpleado));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Nombre             ║ %-38s ║\n", nombre));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Apellido           ║ %-38s ║\n", apellido));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Codigo Empleado    ║ %-38d ║\n", codigoEmpleado));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ email              ║ %-38s ║\n", email));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Extension          ║ %-38s ║\n", extension));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Id Jefe            ║ %-38d ║\n", idJefe));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Puesto             ║ %-38s ║\n", puesto));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+
+        sb.append(String.format("║ Oficina ID         ║ %-38d ║\n", oficina.getIdOficina()));
+        sb.append(String.format("║ Ofician Nombre     ║ %-38s ║\n", oficina.getCodigoOficina()));
+        sb.append("╚════════════════════╩════════════════════════════════════════╝");
+
+
+        return sb.toString();
+    }
 }

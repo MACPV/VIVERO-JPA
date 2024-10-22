@@ -117,4 +117,33 @@ public class Pedido {
     public void setDetallePedidos(List<DetallePedido> detallePedidos) {
         this.detallePedidos = detallePedidos;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("╔════════════════════╦════════════════════════════════════════╗\n");
+
+        sb.append(String.format("║ ID Pedido          ║ %-38d ║\n", idPedido));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Codigo Pedido      ║ %-38d ║\n", codigoPedido));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Comentarios        ║ %-38s ║\n", comentarios));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Estado             ║ %-38s ║\n", estado));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Fecha Entrega      ║ %-38s ║\n", fechaEntrega));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Fecha Esperada     ║ %-38s ║\n", fechaEsperada));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Fecha Pedido       ║ %-38s ║\n", fechaPedido));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+
+        sb.append(String.format("║ Cliente ID         ║ %-38d ║\n", cliente.getIdCliente()));
+        sb.append(String.format("║ Cliente Nombre     ║ %-38s ║\n", cliente.getNombreCliente()));
+        sb.append("╚════════════════════╩════════════════════════════════════════╝");
+
+
+        return sb.toString();
+    }
 }

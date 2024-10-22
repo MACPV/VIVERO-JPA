@@ -40,5 +40,8 @@ public class PagoServicio {
 
         pagoDAO.guardarPago(pagoNuevo);
     }
-
+public void buscarPago(Integer idPago){
+        Pago pago = pagoDAO.buscarPagoID(idPago);
+        pagoDAO.mostrarPago(pago);
+}
 }

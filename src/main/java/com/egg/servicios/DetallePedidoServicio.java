@@ -45,4 +45,9 @@ public class DetallePedidoServicio {
 
         detallePedidoDAO.guardarDetallePedido(detallePedidoNuevo);
     }
+    public void buscarDetallePedido(Integer idDetallePedido){
+        DetallePedido detallePedido = detallePedidoDAO.buscarDetallePedidoID(idDetallePedido);
+        detallePedidoDAO.mostrarDetallePedido(detallePedido);
+
+    }
 }

@@ -1,10 +1,9 @@
 package com.egg;
 
 import com.egg.entidades.Empleado;
-import com.egg.servicios.ClienteServicio;
-import com.egg.servicios.DetallePedidoServicio;
-import com.egg.servicios.GamaProductoServicio;
-import com.egg.servicios.OficinaServicio;
+import com.egg.entidades.Pedido;
+import com.egg.persistencia.ClienteDAO;
+import com.egg.servicios.*;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -17,17 +16,9 @@ public class Main {
         /*EntityManagerFactory emf = Persistence.createEntityManagerFactory("ViveroPU");
         EntityManager em = emf.createEntityManager();*/
 
-        DetallePedidoServicio detallePedidoServicio = new DetallePedidoServicio();
-        detallePedidoServicio.crearDetallePedido(
-                20,
-                "14",
-                (short) 10,
-                4,
-                4
-        );
 
-
-
+        ProductoServicio productoServicio = new ProductoServicio();
+        productoServicio.buscarProducto(1);
       }
 
 

@@ -23,4 +23,10 @@ public class OficinaDAO {
             return null;
         }
     }
+
+    public void mostrarOficina(Oficina oficina){
+        Oficina oficina1 = entityManager.find(Oficina.class, oficina.getIdOficina());
+        System.out.println(oficina1.toString());
+
+    }
 }

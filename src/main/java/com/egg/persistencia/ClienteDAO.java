@@ -9,17 +9,24 @@ public class ClienteDAO {
     private final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("ViveroPU");
     private final EntityManager entityManager = entityManagerFactory.createEntityManager();
 
-    public void guardarCliente(Cliente cliente) throws Exception{
+    public void guardarCliente(Cliente cliente) throws Exception {
         entityManager.getTransaction().begin();
         entityManager.persist(cliente);
         entityManager.getTransaction().commit();
     }
-    public Cliente buscarClienteID(Integer idCliente){
+
+    public Cliente buscarClienteID(Integer idCliente) {
         try {
-            return  entityManager.find(Cliente.class,idCliente);
-        }catch (Exception e){
+            return entityManager.find(Cliente.class, idCliente);
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
+    }
+
+    public void mostrarCliente( Cliente cliente) {
+        Cliente cliente1 = entityManager.find(Cliente.class, cliente.getIdCliente());
+        System.out.print(cliente1.toString());
+
     }
 }

@@ -44,4 +44,8 @@ public class EmpleadoServicio {
 
         empleadoDAO.guardarEmpleado(empleadoNuevo);
     }
+    public void buscarEmpleado(Integer idEmpleado){
+        Empleado empleado = empleadoDAO.buscarEmpleadoPorId(idEmpleado);
+        empleadoDAO.mostrarEmpleado(empleado);
+    }
 }

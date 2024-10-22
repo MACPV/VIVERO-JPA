@@ -81,4 +81,28 @@ public class Pago {
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("╔════════════════════╦════════════════════════════════════════╗\n");
+
+        sb.append(String.format("║ ID Pago            ║ %-38d ║\n", idPago));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Fecha Pago         ║ %-38s ║\n", fechaPago));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Formas Pago        ║ %-38s ║\n", formasPago));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ ID Transaccion     ║ %-38s ║\n", idTransaccion));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Total              ║ %-38s ║\n", total));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Cliente ID         ║ %-38d ║\n", cliente.getIdCliente()));
+        sb.append(String.format("║ Cliente Nombre     ║ %-38s ║\n", cliente.getNombreCliente()));
+        sb.append("╚════════════════════╩════════════════════════════════════════╝");
+
+
+        return sb.toString();
+    }
 }

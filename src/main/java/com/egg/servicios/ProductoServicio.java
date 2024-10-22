@@ -47,4 +47,9 @@ public class ProductoServicio {
         productoDAO.guardarProducto(productoNuevo);
 
     }
+
+    public void buscarProducto(Integer idProducto){
+        Producto producto = productoDAO.buscarProductoID(idProducto);
+        productoDAO.mostrarProducto(producto);
+    }
 }

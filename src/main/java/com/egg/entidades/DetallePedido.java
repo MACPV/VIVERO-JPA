@@ -79,4 +79,35 @@ public class DetallePedido {
     public void setPedido(Pedido pedido) {
         this.pedido = pedido;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        // Línea superior de la tabla
+        sb.append("╔════════════════════╦════════════════════════════════════════╗\n");
+
+        // Datos del detalle pedido
+        sb.append(String.format("║ ID Detalle Pedido  ║ %-38d ║\n", idDetallePedido));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Cantidad           ║ %-38d ║\n", cantidad));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Precio Unidad      ║ %-38.2s ║\n", precioUnidad));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+        sb.append(String.format("║ Número Línea       ║ %-38d ║\n", numeroLinea));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+
+        // Información del producto (asumiendo que producto tiene un getId() y getNombre())
+        sb.append(String.format("║ Producto ID        ║ %-38d ║\n", producto.getIdProducto()));
+        sb.append(String.format("║ Producto Nombre    ║ %-38s ║\n", producto.getNommbre()));
+        sb.append("╠════════════════════╬════════════════════════════════════════╣\n");
+
+        // Información del pedido (asumiendo que pedido tiene un getId())
+        sb.append(String.format("║ Pedido ID          ║ %-38d ║\n", pedido.getIdPedido()));
+
+        // Línea inferior de la tabla
+        sb.append("╚════════════════════╩════════════════════════════════════════╝");
+
+        return sb.toString();
+    }
 }

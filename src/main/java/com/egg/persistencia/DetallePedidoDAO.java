@@ -25,6 +25,10 @@ public class DetallePedidoDAO {
             return null;
         }
     }
+    public void mostrarDetallePedido(DetallePedido detallePedido){
+        DetallePedido detallePedido1 = entityManager.find(DetallePedido.class,detallePedido.getIdDetallePedido());
+        System.out.println(detallePedido1.toString());
+    }
 
 
 }
