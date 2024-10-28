@@ -3,6 +3,8 @@ package com.egg.servicios;
 import com.egg.entidades.Oficina;
 import com.egg.persistencia.OficinaDAO;
 
+import java.util.List;
+
 public class OficinaServicio {
 
     private final OficinaDAO oficinaDAO;
@@ -72,5 +74,14 @@ public class OficinaServicio {
             throw new Exception("No se encontró la oficina con ID: " + idOficina);
         }
         oficinaDAO.eliminarOficina(oficina);
+    }
+    public void listarOficinas() throws Exception{
+        List<Oficina> todasOficinas = oficinaDAO.listarTodo();
+        imprimirLista(todasOficinas);
+    }
+    public void imprimirLista(List<Oficina> listaRecibida){
+        for (Oficina oficina: listaRecibida){
+            System.out.println(oficina.toString());
+        }
     }
 }

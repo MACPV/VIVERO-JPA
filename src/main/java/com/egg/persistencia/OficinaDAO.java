@@ -6,6 +6,8 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
+import java.util.List;
+
 public class OficinaDAO {
     private final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("ViveroPU");
     private final EntityManager entityManager = entityManagerFactory.createEntityManager();
@@ -25,29 +27,33 @@ public class OficinaDAO {
         }
     }
 
-    public void mostrarOficina(Oficina oficina){
+    public void mostrarOficina(Oficina oficina) {
         Oficina oficina1 = entityManager.find(Oficina.class, oficina.getIdOficina());
         System.out.println(oficina1.toString());
 
     }
 
-    public void actualizarOficina(Oficina oficina )throws Exception{
-        try{
+    public void actualizarOficina(Oficina oficina) throws Exception {
+        try {
             entityManager.getTransaction().begin();
             entityManager.merge(oficina);
             entityManager.getTransaction().commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             entityManager.getTransaction().rollback();
             throw new Exception("Error al acualizar oficina");
         }
     }
 
-    public void eliminarOficina(Oficina oficina) throws Exception{
+    public void eliminarOficina(Oficina oficina) throws Exception {
 
 
         entityManager.getTransaction().begin();
         entityManager.remove(oficina);
         entityManager.getTransaction().commit();
 
+    }
+
+    public List<Oficina> listarTodo() throws Exception {
+        return entityManager.createQuery("Select o from Oficina o", Oficina.class).getResultList();
     }
 }

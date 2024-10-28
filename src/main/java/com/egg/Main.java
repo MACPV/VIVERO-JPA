@@ -17,8 +17,8 @@ public class Main {
         EntityManager em = emf.createEntityManager();*/
 
 
-        ProductoServicio productoServicio = new ProductoServicio();
-        productoServicio.buscarProducto(1);
+        OficinaServicio oficinaServicio = new OficinaServicio();
+        oficinaServicio.listarOficinas();
       }
 
 
